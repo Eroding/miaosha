@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+<!-- 配置全局属性
+从web页面穿过来姓名。年龄，密码
+id。姓名。年龄=A表
+id。密码=B表
+1.web先传入到model层，当model层在数据库分为A表和B表
+A表插入时。自动生成id，在设置model的id。
+在把id赋值给B表
+ -->
+ <settings>
+ <!-- 使用jdbc的getgeneratedkeys获取数据库自增主键值 -->
+ <setting name="useGeneratedKeys" value="true"/>
+ 
+  <!-- 使用列别名替换列名 默认为true -->
+ <setting name="userColumnLabel" value="true"/>
+ 
+ <!-- 开启驼峰命名转换 -->
+ <setting name="mapUnderscoreCamelCase" value="true"/>
+ </settings>
+</configuration>

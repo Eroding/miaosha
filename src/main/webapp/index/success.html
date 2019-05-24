@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>发送成功</title>
+</head>
+<style>
+  div{
+    width:400px;
+    height:150px;
+    margin:300px 800px auto auto;
+    overflow:hidden;
+  }
+</style>
+<script type="text/javascript">
+  function countDown(secs,surl){
+   //alert(surl);
+   var jumpTo = document.getElementById('jumpTo');
+   jumpTo.innerHTML=secs;
+   if(--secs>0){
+     setTimeout("countDown("+secs+",'"+surl+"')",1000);
+     }
+   else{
+     location.href=surl;
+     }
+   }
+</script>
+<body>
+  <div class="d_div">
+	注册成功<span id="jumpTo">5</span>秒后自动跳转回<a href="index.html">首页</a>
+	</div>
+</body>
+<script type="text/javascript">countDown(5,'index.html');</script>
+</html>

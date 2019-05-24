@@ -1,0 +1,435 @@
+body{
+  font-family:"微软雅黑";
+  width: 1920px;
+}
+.top_background{
+  background-image: url(../images/top_background.png);
+  background-size:1920px 770px;
+  background-repeat:no-repeat;
+  height: 770px;
+  position:relative;
+}
+.logo{
+  margin-top: 30px;
+}
+.logo_img{
+  height: 66px;
+  width: 67px;
+  margin-left: 55px;
+}
+.logo_text{
+  margin-left: 15px;
+  font-size: 30px;
+  display:inline;
+  color:#fff;
+  vertical-align:middle;
+}
+.tel{
+  font-size: 15px;
+}
+.tel>p{
+  padding: 0px;
+  margin: 0px;
+  color: #fff;
+}
+.navigation{
+  margin-top: 36px;
+  border:1px rgba(0,0,0,0) solid;
+  background: rgba(1,1,1,0.4);
+}
+.navigation>ul>li{
+  list-style: none;
+  display: inline-block;
+  font-size: 15px;
+}
+.navigation>ul>li>p{
+  margin-top:16px;
+  margin-bottom: 5px;
+  color: #fff;
+}
+.navigation>ul>li>a{
+  color: #fff;
+  margin: 30px;
+}
+.profile{
+  margin-top: 104px;
+  margin-left: 181px;
+  color: #fff;
+}
+.profile_title{
+  font-size: 40px;
+}
+.profile_introduce{
+  margin-top: 15px;
+  display: inline-block;
+  padding: 5px;
+  font-size: 20px;
+  background-color: #6d6f6e;
+}
+.profile_target{
+  margin-top: 15px;
+  font-size: 20px;
+}
+.more{
+  margin-top: 40px;
+  margin-left: 181px;
+  display: inline-block;
+  border: 1px #fff solid;
+  padding: 10px;
+}
+.more>a{
+  color: #fff;
+  text-decoration:none !important;
+}
+.more>a:hover {
+  color: #000 !important;
+}
+.top_background_bottom{
+  height: 158px;
+  width: 320px;
+  background-color: rgba(109, 111, 110, 0.3);
+  display: inline-block;
+  margin-top: 55px;
+  color: #fff;
+  border-left: 1px solid #393a3e;
+}
+
+.personnelIntro{
+  margin-top: 90px;
+}
+.personnelIntro_title{
+  margin: 0px auto;
+  width: 1100px;
+  border-bottom: 1px solid #000;
+}
+.personnelIntro_allpersonnel{
+  margin-top: 40px;
+  margin-left: 375px;
+}
+.personnelIntro_allpersonnel_display{
+  display: inline-flex;
+  margin-top: 15px;
+}
+.personnelIntro_allpersonnel_image{
+  display: inline-flex;
+  background-repeat:no-repeat;
+  width: 570px;
+  height: 350px;
+}
+.personnelIntro_title_text{
+  font-size: 20px;
+  text-align: center;
+  position: relative;
+}
+.personnelIntro_title_text_yellow{
+  height: 9px;
+  width: 36px;
+  position: absolute;
+  top: 34px;
+  left: 530px;
+}
+.personnelIntro_allpersonnel_image_texts{
+  width: 300px;
+  margin-left: 250px;
+  margin-top: 50px;
+}
+.personnelIntro_allpersonnel_image_texts_div{
+  margin-top: 15px;
+}
+.personnelIntro_allpersonnel_image_texts_img{
+  width: 10px;
+  height: 15px;
+}
+.personnelIntro_allpersonnel_image_texts_p{
+  display: inline;
+  color: #fff;
+}
+.personnelIntro_allpersonnel_name{
+  font-size: 25px;
+  margin: 10px 250px;
+  position: relative;
+}
+.personnelIntro_allpersonnel_name_yellow{
+  height: 4px;
+  width: 32px;
+  position: absolute;
+  top: 40px;
+  left: 20px;
+}
+
+.problem{
+  margin-top: 45px;
+  height: 625px;
+  background-image: url("../images/background.png");
+}
+.problem_title{
+  margin-top: 70px;
+  color: #fff;
+  border-bottom: 1px solid #ffffff;
+  text-align: center;
+  font-size: 25px;
+  position: relative;
+}
+.problem_title_yellow_position{
+  height: 9px;
+  width: 36px;
+  position: absolute;
+  top: 41px;
+  left: 550px;
+}
+.problem_key{
+  margin: 65px;
+}
+.problem_key_background{
+  margin: 0px 15px;
+  width: 180;
+  height: 243px;
+  background-color: rgba(255, 255, 255,0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.problem_key_background_simple{
+  font-size: 20px;
+  margin-top: 20px;
+}
+.problem_key_background_detailed{
+  font-size: 8px;
+  margin: 0px -10px;
+}
+.call{
+  width: 320px;
+  height: 35px;
+  margin: 0px auto;
+  background-image: url("../images/yellow.png");
+  background-repeat: no-repeat;
+  background-size: 320px 35px;
+  text-align: center;
+  font-size: 20px;
+  padding: 3px;
+}
+
+.ability_title{
+  margin-top: 73px;
+  position: relative;
+}
+.ability_title_name{
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  font-size: 25px;
+  text-align: center;
+}
+.ability_title_details{
+  margin-top: 0px;
+  padding-top: 0px;
+  padding-bottom: 15px;
+  font-size: 18px;
+  color: #a1a1a1;
+  border-bottom: 1px solid #000;
+  text-align: center;
+}
+.ability_title_green{
+  width: 36px;
+  height: 8px;
+  background-color: #76c6a1;
+  position: absolute;
+  top: 72px;
+  left: 550px;
+}
+.ability_list{
+  margin-top: 89px;
+}
+.ability_single{
+  width: 330px;
+  height: 145px;
+  display: inline-block;
+  margin-left: 20px;
+}
+.ability_single_img{
+  margin-top: -100px;
+}
+.ability_single_text{
+  width: 220px;
+  display: inline-block;
+}
+.ability_single_title{
+  font-size: 27px;
+}
+
+.guarantee{
+  background-image: url(../images/background.png);
+  height: 620px;
+}
+.ability_title{
+  margin-top: 73px;
+}
+.guarantee_title_name{
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  font-size: 25px;
+  color: #fff;
+  text-align: center;
+}
+.guarantee_title_details{
+  margin-top: 0px;
+  padding-top: 0px;
+  padding-bottom: 15px;
+  font-size: 18px;
+  color: #a1a1a1;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+}
+.guarantee_title_yellow{
+  width: 36px;
+  height: 8px;
+  background-color: #fbf267;
+  position: absolute;
+  top: 72px;
+  left: 550px;
+}
+.guarantee_all{
+  margin-top: 43px;
+}
+.guarantee_single{
+  width: 540px;
+  height: 149px;
+  background-color: #5c5c5c;
+  display: inline-block;
+  vertical-align: top;
+  margin: 15px;
+}
+.guarantee_single_yellow{
+  background-color: #fef164;
+  width: 10px;
+  height: 100%;
+  display: inline-block;
+}
+.iconANDtitle{
+  display: inline-block;
+  margin: 20px;
+  vertical-align: top;
+}
+.iconANDtitle_title{
+  display: inline;
+  color: #f0f0f0;
+  font-size: 20px;
+  vertical-align: middle;
+}
+.guarantee_single_content{
+  color: #b7b7b7;
+  font-size: 15px;
+  margin-top: -60px;
+  margin-left: 50px;
+}
+
+.case_title_name{
+  padding-bottom: 20px;
+  font-size: 25px;
+  border-bottom: 1px solid #000;
+  text-align: center;
+}
+.case_title_green{
+  width: 36px;
+  height: 8px;
+  background-color: #76c6a1;
+  position: absolute;
+  top: 52px;
+  left: 570px;
+}
+.case_list{
+  margin-top: 15px;
+}
+.case_single{
+  margin: 15px;
+  width: 340px;
+  height: 194px;
+  display: inline-block;
+}
+
+.contact{
+  margin-top: 42px;
+}
+.contact_address_background{
+  background-image: url(../images/ditu.jpg);
+  width: 1920px;
+  height: 647px;
+}
+.contact_address{
+  margin-left: 369px;
+  margin-top: 70px;
+}
+.contact_address_title{
+  color: #fff;
+  font-size: 63px;
+}
+.contact_address_name{
+  width: 578px;
+  height: 68px;
+  font-size: 20px;
+}
+.contact_address_phone{
+  margin-left: 10px;
+}
+.contact_address_name::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    font-size: 20px;
+    padding-left: 15px;
+}
+.contact_address_name:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   font-size: 20px;
+   padding-left: 15px;
+   opacity:  1;
+}
+.contact_address_name::-moz-placeholder { /* Mozilla Firefox 19+ */
+   font-size: 20px;
+   padding-left: 15px;
+   opacity:  1;
+}
+.contact_address_name:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   font-size: 20px;
+   padding-left: 15px;
+}
+.contact_address_content{
+  margin-top: 20px;
+  width: 1170px;
+  height: 238px;
+}
+.contact_address_content::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    font-size: 20px;
+    padding: 15px;
+}
+.contact_address_content:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   font-size: 20px;
+   padding: 15px;
+   opacity:  1;
+}
+.contact_address_content::-moz-placeholder { /* Mozilla Firefox 19+ */
+   font-size: 20px;
+   padding: 15px;
+   opacity:  1;
+}
+.contact_address_content:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   font-size: 20px;
+   padding: 15px;
+}
+.contact_address_send{
+  display: block;
+  width: 162px;
+  height: 57px;
+  background-color: #fef164;
+  font-size: 20px;
+  margin-left: 1010px;
+  margin-top: 25px;
+}
+.contact_bottom{
+  background-color: #202020;
+  height: 150px;
+  font-size: 16px;
+  color: #ccc;
+  padding-top: 60px;
+  text-align: center;
+}
+.contact_bottom_address{
+  margin-left: 70px;
+}

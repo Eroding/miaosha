@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../css/index.css">
+  <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+  integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css"
+  integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+  <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+  <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+  integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js" charset="utf-8"></script>
+  <title>首页</title>
+</head>
+<body>
+  <!-- 第一层公司标题 -->
+  <div class="top_background">
+    <div class="" style="height:1px">
+
+    </div>
+    <!-- 宁波大亿logo -->
+    <div class="logo row">
+      <div class="col-md-6">
+        <img class="logo_img" src="../images/WechatIMG7.png" alt="">
+        <p class="logo_text">大亿网络科技有限公司</p>
+      </div>
+      <div class="col-md-3 col-md-offset-3 tel">
+        <p>联系电话：0574-65751162</p>
+        <p>手机号码：13336656969</p>
+      </div>
+    </div>
+    <!-- 导航栏 -->
+    <div class="navigation">
+      <ul>
+        <li><a href="">首页</a></li>
+        <li><p>丨</p></li>
+        <li><a href="">关于我们</a></li>
+        <li><p>丨</p></li>
+        <li><a href="">服务项目</a></li>
+        <li><p>丨</p></li>
+        <li><a href="">成功案例</a></li>
+        <li><p>丨</p></li>
+        <li><a href="">公司历程</a></li>
+        <li><p>丨</p></li>
+        <li><a href="">联系我们</a></li>
+      </ul>
+    </div>
+    <!-- 公司简介 -->
+      <div class="profile">
+        <p class="profile_title">网店托管代运营</p>
+        <p class="profile_introduce">{{introduce}}</p>
+        <p class="profile_target">冲击销量200-500万以上</p>
+      </div>
+      <!-- 更多 -->
+      <div class="more" :style="count===1?background_active_white:background_active_black" ><a  href="#" v-on:mouseover="white" v-on:mouseout="black">了解更多</a></div>
+      <div class="">
+
+      </div>
+      <div class="top_background_bottom"  v-for="(item,i) in bottom"  v-on:click="bottomaa" :ref="item.id">
+          {{item.src}}
+      </div>
+  </div>
+
+  <!-- 第二层 团队人员介绍 -->
+  <div class="personnelIntro">
+    <!-- 标题 -->
+    <div class="personnelIntro_title">
+      <p class="personnelIntro_title_text">四大王牌为您服务<img class="personnelIntro_title_text_yellow" src="../images/yellow.png" alt=""></p>
+    </div>
+    <!-- 图片 -->
+    <div class="personnelIntro_allpersonnel">
+      <!-- 背景 -->
+      <div class="personnelIntro_allpersonnel_display"  v-for="(item, i) in images">
+        <div class="">
+          <div class="personnelIntro_allpersonnel_image" v-bind:style="item.src">
+            <div class="personnelIntro_allpersonnel_image_texts">
+              <div class="personnelIntro_allpersonnel_image_texts_div" v-for="(itema, i) in item.text">
+                <img class="personnelIntro_allpersonnel_image_texts_img" src="../images/yellow.png" alt="">
+                <p class="personnelIntro_allpersonnel_image_texts_p">{{itema.intro}}</p>
+              </div>
+            </div>
+          </div>
+          <!-- 名字 -->
+          <p class="personnelIntro_allpersonnel_name" >
+            {{item.name}}
+            <img class="personnelIntro_allpersonnel_name_yellow" src="../images/yellow.png" alt="" v-if="item.name.length==3">
+            <img class="personnelIntro_allpersonnel_name_yellow" style="left:10px" src="../images/yellow.png" alt="" v-else-if="item.name.length==2">
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 第三层传统企业为什么做不好电商 -->
+  <div class="problem">
+    1
+    <!-- 标题 -->
+    <div class="problem_title container">
+      <p>传统企业为什么做不好电商</p>
+      <img class="problem_title_yellow_position" src="../images/yellow.png" alt="">
+    </div>
+    <!-- 关键问题 -->
+    <div class="problem_key container">
+
+      <div class="problem_key_background col-lg-2 col-md-2 col-sm-2 col-xs-2" v-for="(item, i) in images">
+        <img :src="item.src" alt="">
+        <p class="problem_key_background_simple">{{item.simple}}</p>
+        <p class="problem_key_background_detailed">{{item.detailed}}</p>
+      </div>
+    </div>
+    <!-- 联系我们 -->
+    <div class="call">
+      <p>联系我们，帮您解决问题!</p>
+    </div>
+  </div>
+
+  <!-- 第四层我们能为您带来什么 -->
+  <div class="ability container">
+    <!-- 标题 -->
+    <div class="ability_title">
+      <p class="ability_title_name">我们能为您带来什么</p>
+      <p class="ability_title_details">我们实时与您共享新闻资讯、行业动态、发展历程，大数据，同分享，一路成长一路相伴</p>
+      <div class="ability_title_green"></div>
+    </div>
+    <!-- 各项能力 -->
+    <div class="ability_list">
+      <!-- 一个能力 -->
+      <div class="ability_single" v-for="(item, i) in ability_list">
+        <img class="ability_single_img" :src="item.src" alt="">
+        <div class="ability_single_text">
+          <p class="ability_single_title">{{item.title}}</p>
+          <p class="ability_single_content">{{item.content}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 第五层四大保障 -->
+  <div class="guarantee">
+    <div class="" style="border: 1px solid"></div>
+    <!-- 标题 -->
+    <div class="ability_title container">
+      <p class="guarantee_title_name">四大保障让您无后顾之忧</p>
+      <p class="guarantee_title_details">我们长期专注于店铺代运营等方面服务，拥有强大的运营团队和专业的美工团队和创新的IT团队</p>
+      <div class="guarantee_title_yellow"></div>
+    </div>
+    <!-- 四大保障 -->
+    <div class="guarantee_all container">
+      <!-- 一个保障 -->
+      <div class="guarantee_single"  v-for="(item, i) in guarantee">
+        <div class="guarantee_single_yellow"></div>
+        <div class="iconANDtitle">
+          <!-- 图标 -->
+          <img class="iconANDtitle_icon" :src="item.src" alt="">
+          <!-- 标题 -->
+          <p class="iconANDtitle_title">{{item.title}}</p>
+        </div>
+        <p class="guarantee_single_content">{{item.content}}</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 第六层成功案例展示 -->
+  <div class="case">
+    <!-- 标题 -->
+    <div class="ability_title container">
+      <p class="case_title_name">成功案例展示</p>
+      <div class="case_title_green"></div>
+    </div>
+    <!-- 案例展示 -->
+    <div class="case_list container">
+      <div class="case_single" v-for="(item,i) in casee" :style="item.src"></div>
+    </div>
+  </div>
+
+  <!-- 第七层联系我们 -->
+  <div class="contact">
+    <!-- 地图 -->
+    <div class="contact_address_background">
+      <div style="border:solid 1px"></div>
+      <div class="contact_address">
+        <p class="contact_address_title">联系我们</p>
+        <form class="" action="success.html" method="get">
+          <!-- 姓名和联系方式 -->
+          <div class="nameANDphone">
+            <input class="contact_address_name" type="text" name="" value="" placeholder="姓名:">
+            <input class="contact_address_name contact_address_phone" type="text" name="" value="" placeholder="联系方式:">
+          </div>
+          <textarea class="contact_address_content" name="name" placeholder="请输入您的留言内容"></textarea>
+          <button class="contact_address_send" type="submit" name="button">发表留言</button>
+        </form>
+      </div>
+    </div>
+    <!-- 电话和地址 -->
+    <div class="contact_bottom">
+      <span>电话：0574-65751162</span>
+      <span class="contact_bottom_address">地址：浙江宁波象山丹城镇园中路98号</span>
+    </div>
+  </div>
+</body>
+<script>
+  new Vue({
+    el: ".top_background",
+    data:{
+      background_active_black: "background-color: #000;",
+      background_active_white: "background-color: #fff;",
+      count: 0,
+      introduce: "为您提供一站式店铺管理、运营、推广、营销服务",
+      bottom:[
+        {
+          id: 0,
+          src: "实践"
+        },
+        {
+          id: 1,
+          src: "实践"
+        },
+        {
+          id: 2,
+          src: "实践"
+        },
+        {
+          id: 3,
+          src: "实践"
+        },
+        {
+          id: 4,
+          src: "实践"
+        },
+        {
+          id: 5,
+          src: "实践"
+        }
+      ],
+      count2: 0,
+      background_active_bottom: "background-color: rgba(0, 0, 0, 0.4);",
+      background_active_bottom2: "background-color: rgba(109, 111, 110, 0.3);"
+    },
+    beforeMount(){
+      console.log(this.introduce.length);
+      let start = null;
+      let end = null;
+      let i = 0;
+      let interval = null;
+      interval = setInterval(() => {
+        fun();
+      },300);
+      let fun = () => {
+        start = this.introduce.substring(0,1);
+        end = this.introduce.substring(1);
+        this.introduce = end + start;
+        i++;
+        if (i == this.introduce.length) {
+          i=0;
+          clearInterval(interval);
+          setTimeout(() => {
+            interval = setInterval(() => {
+              fun();
+            },300);
+          },2000)
+        }
+      }
+    },
+    methods:{
+      white:function(event){
+        console.log(this.count);
+        this.count++;
+      },
+      black:function(event){
+        console.log(this.count);
+        this.count--;
+      },
+      bottomaa:function(event){
+        console.log(event);
+      console.log(123);
+      let aa = this.bottom[0].id
+      console.log(this.bottom[0].id);
+          console.log(this.$refs[2]);
+        // console.log(this.$refs.input.class)
+        // console.log(this.count2);
+        // this.count2++;
+      },
+      bottombb:function(event){
+        console.log(this.count2);
+        this.count2--;
+      },
+    }
+  })
+
+  new Vue({
+    el: ".personnelIntro_allpersonnel",
+    data: {
+      images:[
+        {
+          src: "background-image: url(../images/wsy.png)",
+          text:[
+            {intro: "搜索资深运营操盘手,运营过3M公司旗下店铺与九嘉旗舰店,羽梦莱旗舰店等之类电商top级商家"},
+            {intro: "多年从事电商代运营行业"},
+            {intro: "历史总操盘店铺销售额过亿"},
+            {intro: "单店铺稳定销售额最高30万一天"},
+            {intro: "擅长淘宝搜索，资源整合，视觉优化 擅长类目 收纳整理，居家布艺，服饰配件"}
+          ],
+          name: "魏舜耀"
+        }, {
+          src: "background-image: url(../images/hj.png)",
+          text:[
+            {intro: "资深内容运营 擅长产品内容，后续客户运营 主攻小类目产品如特产，水果，生鲜，尤其对食品类又自己独特的一套"},
+            {intro: "历史总超盘店铺活动如销售额过百万"},
+            {intro: "历史服务三家村旗舰店，象山红美人旗舰店，捞鱼坊天猫旗舰店多家店铺"}
+          ],
+          name: "黄俊"
+        }, {
+          src: "background-image: url(../images/zyf.png)",
+          name: "张扬帆"
+        }, {
+          src: "background-image: url(../images/gll.png)",
+          name: "高兰兰"
+        }
+      ]
+    },
+    methods: {
+
+    },
+  })
+
+  new Vue({
+    el: ".problem_key",
+    data: {
+      images:[
+        {
+          src: "../images/problem (1).png",
+          simple: "没有电商基础",
+          detailed: "传统企业重生产，而电商重运营"
+        },
+        {
+          src: "../images/problem (2).png",
+          simple: "没有电商经验",
+          detailed: "靠自己摸索，走弯路，周期长"
+        },
+        {
+          src: "../images/problem (3).png",
+          simple: "没有专业团队",
+          detailed: "运营、设计、推广不专业"
+        },
+        {
+          src: "../images/problem (4).png",
+          simple: "没有平台资源",
+          detailed: "不管是哪个平台，资源很重要"
+        },
+        {
+          src: "../images/problem (5).png",
+          simple: "没有大数据",
+          detailed: "数据是服务的基础，无数据不服务"
+        }
+      ]
+    }
+  })
+
+  new Vue({
+    el:".ability_list",
+    data: {
+      ability_list: [
+        {
+          src: "../images/jieyueshijian.png",
+          title: "节约时间",
+          content: "擅长风险评估，风险控制，营销策划，活动策划，产品定位产品包装深入挖掘客户价值等"
+        },
+        {
+          src: "../images/jieyueshijian2.png",
+          title: "节约时间",
+          content: "擅长风险评估，风险控制，营销策划，活动策划，产品定位产品包装深入挖掘客户价值等"
+        },
+        {
+          src: "../images/jieyueshijian3.png",
+          title: "节约时间",
+          content: "擅长风险评估，风险控制，营销策划，活动策划，产品定位产品包装深入挖掘客户价值等"
+        },
+        {
+          src: "../images/jieyueshijian4.png",
+          title: "节约时间",
+          content: "擅长风险评估，风险控制，营销策划，活动策划，产品定位产品包装深入挖掘客户价值等"
+        },
+        {
+          src: "../images/jieyueshijian.png",
+          title: "节约时间",
+          content: "擅长风险评估，风险控制，营销策划，活动策划，产品定位产品包装深入挖掘客户价值等"
+        },
+        {
+          src: "../images/jieyueshijian6.png",
+          title: "节约时间",
+          content: "擅长风险评估，风险控制，营销策划，活动策划，产品定位产品包装深入挖掘客户价值等"
+        }
+      ]
+    }
+  })
+
+  new Vue({
+    el: ".guarantee_all",
+    data: {
+      guarantee: [
+        {
+          src: "../images/guarantee.png",
+          title: "业绩考核",
+          content: "专业精英团队，从实战中来到实战中去"
+        },
+        {
+          src: "../images/guarantee2.png",
+          title: "经验",
+          content: "在多年淘宝托管实战经验中积累了大量的淘宝推广渠道、淘宝活动、淘宝分销资源，建立齐了成熟的托管理念和运营体系。"
+        },
+        {
+          src: "../images/guarantee3.png",
+          title: "实力",
+          content: "自建淘宝大数据系统，实时监控行业大盘，把控各方面数据信息并进行整合、分析，技术和实力使我们代运营的基础。"
+        },
+        {
+          src: "../images/guarantee4.png",
+          title: "合作共赢",
+          content: "坚持以客户的需求为第一准则，我们是一家真正与客户实行我赢的公司"
+        }
+      ]
+    }
+  })
+
+  new Vue({
+    el: ".case_list",
+    data: {
+      casee:[
+        {src: "background-image:url(../images/case.png)"},
+        {src: "background-image:url(../images/case2.png)"},
+        {src: "background-image:url(../images/case3.png)"},
+        {src: "background-image:url(../images/case4.png)"},
+        {src: "background-image:url(../images/case5.png)"},
+        {src: "background-image:url(../images/case6.png)"},
+        {src: "background-image:url(../images/case7.png)"},
+        {src: "background-image:url(../images/case8.png)"},
+        {src: "background-image:url(../images/case9.png)"}
+      ]
+    }
+  })
+
+</script>
+</html>
