@@ -116,7 +116,7 @@
  <dependency>
  <groupId>org.springframework</groupId>
  <artifactId>spring-beans</artifactId>
- <version>4.1.7.RELEASE</version>
+ <version>5.3.18</version>
  </dependency>
    <!-- spring 包扫描相关依赖 -->
  <dependency>
